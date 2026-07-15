@@ -23,14 +23,11 @@ Revisão → Edição/Entrega. O Coordenador pede sua aprovação nos pontos-cha
 
 ## Instalação
 
-Requer **Node.js 18+**. Na pasta onde você quer criar seus materiais:
+Requer **Node.js 18+**. Na pasta onde você quer criar seus materiais, rode
+direto do GitHub (não precisa clonar nem instalar nada global):
 
 ```bash
-# direto do GitHub (antes de publicar no npm):
 npx github:jandreisst/conselho-academico install
-
-# depois de publicado no npm:
-npx conselho-academico install
 ```
 
 O `install` copia as skills para `.claude/skills/`, cria a pasta `materiais/`,
