@@ -27,7 +27,7 @@ Requer **Node.js 18+**. Na pasta onde você quer criar seus materiais, rode
 direto do GitHub (não precisa clonar nem instalar nada global):
 
 ```bash
-npx github:jandreisst/conselho-academico install
+npx github:JandreiSS/conselho-academico install
 ```
 
 O `install` copia as skills para `.claude/skills/`, cria a pasta `materiais/`,
