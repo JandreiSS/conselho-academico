@@ -1,0 +1,48 @@
+% Template LaTeX do Conselho Acadêmico — material didático
+% Uso com Pandoc:
+%   pandoc material.md -o material.tex --standalone --template=template.tex -V lang=pt-BR
+% Compilar com xelatex (melhor suporte a UTF-8/acentuação):
+%   xelatex material.tex
+\documentclass[11pt,a4paper]{article}
+
+% --- Codificação e idioma -------------------------------------------------
+\usepackage{ifxetex,ifluatex}
+\ifxetex\else\ifluatex\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi\fi
+\usepackage[brazil]{babel}
+
+% --- Layout ---------------------------------------------------------------
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+
+% --- Recursos comuns em material didático --------------------------------
+\usepackage{amsmath,amssymb}   % fórmulas
+\usepackage{graphicx}          % imagens
+\usepackage{booktabs}          % tabelas elegantes
+\usepackage{longtable}
+\usepackage{enumitem}          % listas
+\usepackage{xcolor}
+\usepackage{tcolorbox}         % boxes (Atenção, Resumo, Você sabia?)
+\usepackage[hidelinks]{hyperref}
+
+% Caixa de destaque reutilizável
+\newtcolorbox{destaque}[1][Nota]{colback=blue!5!white,colframe=blue!50!black,
+  title=#1,fonttitle=\bfseries}
+
+% --- Metadados (preenchidos por Pandoc ou manualmente) --------------------
+$if(titulo)$\title{$titulo$}$else$$if(title)$\title{$title$}$endif$$endif$
+$if(autor)$\author{$autor$}$else$$if(author)$\author{$for(author)$$author$$sep$ \and $endfor$}$endif$$endif$
+$if(date)$\date{$date$}$else$\date{\today}$endif$
+
+\begin{document}
+
+$if(title)$\maketitle$endif$
+$if(toc)$\tableofcontents\newpage$endif$
+
+$body$
+
+\end{document}

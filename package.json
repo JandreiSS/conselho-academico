@@ -1,0 +1,44 @@
+{
+  "name": "conselho-academico",
+  "version": "0.1.0",
+  "description": "Uma equipe de profissionais da educação para o Claude Code: skills que colaboram para criar materiais didáticos (roteiro de aula, plano de aula, livro, apostila, sequência didática) e geram briefings prontos para virar slides no Mira.",
+  "bin": {
+    "conselho-academico": "bin/cli.js"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "agents",
+    "templates"
+  ],
+  "scripts": {
+    "test": "node test/smoke.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skills",
+    "agents",
+    "educação",
+    "educacao",
+    "material-didatico",
+    "roteiro-de-aula",
+    "plano-de-aula",
+    "bncc",
+    "mira"
+  ],
+  "author": "Jandrei",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jandreisst/conselho-academico.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jandreisst/conselho-academico/issues"
+  },
+  "homepage": "https://github.com/jandreisst/conselho-academico#readme"
+}

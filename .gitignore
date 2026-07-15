@@ -1,0 +1,14 @@
+# Dependências / build
+node_modules/
+npm-debug.log*
+*.tgz
+
+# Artefatos de instalação local (ao testar o CLI na raiz do repo)
+/.claude/
+/materiais/
+/conselho.config.json
+/CLAUDE.md
+
+# Sistema
+.DS_Store
+Thumbs.db
